@@ -10,7 +10,7 @@ public class GenreService {
         this.scanner = scanner;
     }
 
-    public void genre_list(){
+    public void show_genre_list(){
         System.out.println();
         System.out.println("This is a list of genres:");
 
@@ -20,11 +20,6 @@ public class GenreService {
         for(Genre g : genre_list){
             System.out.println(g.genre_name);
         }
-
-        System.out.println();
-
-        GenreServiceMenu genre_menu = new GenreServiceMenu(scanner);
-        genre_menu.show_genre_menu();
     }
 
     public void add_new_genre(){

@@ -31,10 +31,6 @@ public class OrderedMoviesService {
 
         OrderedMoviesMenu orderedMoviesMenu = new OrderedMoviesMenu(scanner);
         orderedMoviesMenu.show_orders_menu();
-
-        scanner.nextLine();
-        System.out.print("Would you like to go back? (Press Enter)");
-        scanner.nextLine();
     }
 
     public void add_new_order(){
@@ -93,7 +89,6 @@ public class OrderedMoviesService {
         }else{
             id_movie = movies_list.get(0).id_movie;
         }
-        scanner.nextLine();
 
         System.out.print("Enter date due movie is rented (yyyy-mm-dd): ");
         LocalDate rent_when = LocalDate.parse(scanner.nextLine());

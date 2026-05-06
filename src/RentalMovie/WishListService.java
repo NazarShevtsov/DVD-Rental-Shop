@@ -25,16 +25,12 @@ public class WishListService {
             System.out.println("Wish Nr " + r.id_order);
             System.out.println("Client: " + r.client_first_name + " " + r.client_second_name);
             System.out.println("Ordered movie: " + r.movie_title + " (" + r.movie_year + ")");
-            System.out.println("Due to: " + r.rent_date);
+            System.out.println("When: " + r.rent_date);
             System.out.println();
         }
 
         WishListServiceMenu wishListMenu = new WishListServiceMenu(scanner);
         wishListMenu.show_wish_list_menu();
-
-        scanner.nextLine();
-        System.out.print("Would you like to go back? (Press Enter)");
-        scanner.nextLine();
     }
 
     public void add_new_wish(){
@@ -93,7 +89,6 @@ public class WishListService {
         }else{
             id_movie = movies_list.get(0).id_movie;
         }
-        scanner.nextLine();
 
         System.out.print("Enter date when client want to rent (yyyy-mm-dd): ");
         LocalDate rent_when = LocalDate.parse(scanner.nextLine());

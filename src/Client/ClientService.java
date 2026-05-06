@@ -11,7 +11,7 @@ public class ClientService {
         this.scanner = scanner;
     }
 
-    public void clients_list(){
+    public void show_clients_list(){
         System.out.println();
         System.out.println("This is a list of your clients:");
 
@@ -24,13 +24,6 @@ public class ClientService {
 
         System.out.println();
         System.out.println();
-
-        ClientServiceMenu client_menu = new ClientServiceMenu(scanner);
-        client_menu.show_client_service_menu();
-
-
-        System.out.print("Would you like to go back? (Press Enter)");
-        scanner.nextLine();
     }
 
     public void add_new_client(){

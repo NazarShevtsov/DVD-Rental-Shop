@@ -1,5 +1,5 @@
-import Client.ClientService;
-import Movie.MovieService;
+import Client.ClientMenu;
+import Movie.MovieMenu;
 import RentalMovie.RentalsServiceMenu;
 import Review.ReviewMenu;
 
@@ -35,13 +35,13 @@ public class Menu {
 
             switch(choice){
                 case 1:
-                    ClientService clientService = new ClientService(scanner);
-                    clientService.clients_list();
+                    ClientMenu clientMenu = new ClientMenu(scanner);
+                    clientMenu.client_menu();
                     break;
 
                 case 2:
-                    MovieService movieService = new MovieService(scanner);
-                    movieService.movies_list();
+                    MovieMenu movieMenu = new MovieMenu(scanner);
+                    movieMenu.movie_menu();
                     break;
                 case 3:
                     RentalsServiceMenu rentalsServiceMenu = new RentalsServiceMenu(scanner);

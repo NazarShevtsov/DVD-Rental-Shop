@@ -12,7 +12,7 @@ public class MovieService {
         this.scanner = scanner;
     }
 
-    public void movies_list(){
+    public void show_movies_list(){
         System.out.println();
         System.out.println("This is a list of your movie`s stock:");
 
@@ -23,15 +23,9 @@ public class MovieService {
             System.out.println(m.movie_title + " (" + m.movie_year + ")");
         }
 
-        MovieServiceMenu movieMenu = new MovieServiceMenu(scanner);
-        movieMenu.show_movies_service_menu();
-
-        System.out.print("Would you like to go back? (Press Enter)");
-        scanner.nextLine();
     }
 
     public void add_new_movie(){
-        scanner.nextLine();
 
         System.out.print("Enter movie title: ");
         String movie_title = scanner.nextLine();
